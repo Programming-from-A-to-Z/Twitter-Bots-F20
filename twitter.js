@@ -2,11 +2,12 @@ const OAuth = require("oauth");
 
 class Twitter {
   constructor(config) {
+    this.config = config;
     this.oauth = new OAuth.OAuth(
       "https://api.twitter.com/oauth/request_token",
       "https://api.twitter.com/oauth/access_token",
-      process.env.TWITTER_CONSUMER_KEY,
-      process.env.TWITTER_CONSUMER_SECRET,
+      this.config.CONSUMER_KEY,
+      this.config.CONSUMER_SECRET,
       "1.0A",
       null,
       "HMAC-SHA1"
@@ -21,8 +22,8 @@ class Twitter {
     return new Promise((resolve, reject) => {
       this.oauth.post(
         "https://api.twitter.com/1.1/statuses/update.json",
-        process.env.TWITTER_ACCESS_TOKEN, // oauth_token (user access token)
-        process.env.TWITTER_ACCESS_TOKEN_SECRET, // oauth_secret (user secret)
+        this.config.ACCESS_TOKEN, // oauth_token (user access token)
+        this.config.ACCESS_TOKEN_SECRET, // oauth_secret (user secret)
         postBody, // post body
         "", // post content type ?
         function (err, data, res) {
