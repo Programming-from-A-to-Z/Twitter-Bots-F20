@@ -1,0 +1,25 @@
+{
+  "name": "twitter-bot-a2z",
+  "version": "1.0.0",
+  "description": "New twitter bot examples",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiffman/Twitter-Bot-A2Z.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiffman/Twitter-Bot-A2Z/issues"
+  },
+  "homepage": "https://github.com/shiffman/Twitter-Bot-A2Z#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1",
+    "oauth": "^0.9.15",
+    "tenorjs": "^1.0.7"
+  }
+}
