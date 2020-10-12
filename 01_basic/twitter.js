@@ -3,6 +3,8 @@ const OAuth = require("oauth");
 class Twitter {
   constructor(config) {
     this.config = config;
+    console.log(this.config);
+    console.log(this.config.CONSUMER_KEY);
     this.oauth = new OAuth.OAuth(
       "https://api.twitter.com/oauth/request_token",
       "https://api.twitter.com/oauth/access_token",
