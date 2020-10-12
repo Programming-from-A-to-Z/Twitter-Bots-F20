@@ -44,7 +44,10 @@ const startServer = (port, auth, tweetHandler) =>
             console.error(e);
           }
 
-          tweetHandler(JSON.parse(body));
+          let json = JSON.parse(body);
+          if (json.tweet_create_events) {
+            tweetHandler(json.for_user_id, json.tweet_create_events[0]);
+          }
           res.writeHead(200);
           res.end();
         });
