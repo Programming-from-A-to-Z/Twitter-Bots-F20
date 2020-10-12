@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "oauth": "^0.9.15",
     "twitter-autohook": "^1.7.2"
   }
 }
