@@ -1,15 +1,15 @@
 console.log("hi twitter");
 
 const dotenv = require("dotenv");
-
-const Twitter = require("./twitter.js");
 dotenv.config();
 
+const Twitter = require("./twitter.js");
+
 const config = {
-  CONSUMER_KEY: process.env.TWITTER_CONSUMER_KEY,
-  CONSUMER_SECRET: process.env.TWITTER_CONSUMER_SECRET,
-  ACCESS_TOKEN: process.env.TWITTER_ACCESS_TOKEN,
-  ACCESS_TOKEN_SECRET: process.env.TWITTER_ACCESS_TOKEN_SECRET,
+  consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  token: process.env.TWITTER_ACCESS_TOKEN,
+  token_secret: process.env.TWITTER_ACCESS_TOKEN_SECRET,
 };
 
 const twitter = new Twitter(config);
